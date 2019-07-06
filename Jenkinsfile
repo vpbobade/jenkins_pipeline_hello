@@ -16,13 +16,12 @@ node {
         echo "deploying"
     }
 }
-node {
-    stage ('Get approval'){
+
+stage ('Get approval'){
         input "Deploy to prod?"
-        
-    }
+}
     
-    node {
+node {
     stage ('deploy to prod'){
         echo "deploying to prod"
     }
